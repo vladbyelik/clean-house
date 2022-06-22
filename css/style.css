@@ -256,6 +256,28 @@ a {
   background-color: #1061a6;
 }
 
+/* ===================================================== */
+
+.services__title {
+  /* display: flex; */
+  /* justify-content: center; */
+
+  text-align: center;
+  font-size: 55px;
+  font-family: 'Yeseva One', cursive;
+  font-weight: normal;
+}
+
+.services__subtitle {
+  /* display: flex; */
+  /* justify-content: center; */
+  text-align: center;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* ============================================================ */
+
 .services__list {
   display: flex;
   flex-direction: column;
@@ -266,6 +288,11 @@ a {
 .services__img {
   width: 100px;
   height: 65px;
+}
+
+.services__item:hover {
+  background-color:  #c9ff74;
+  transition: .5s;
 }
 
 
@@ -339,6 +366,40 @@ a {
   background-image: linear-gradient(to right, rgba(122,198,0, 0.81) 17%, rgba(255,255,255, 0) 77%), url(./../img/foam.svg);
   background-color: #079262;
   background-position: left 0px top 0px, left calc(-263px + 50%) bottom -344px;
+}
+.form{
+  margin-top: 30px;
+  height: 233px;
+}
+.form_data{
+  display: flex;
+}
+.form input{
+  border: none;
+}
+.form, .form_input{
+  display: flex;
+  flex-direction: column;
+}
+.form input[type="text"],
+.form input[type="number"]{
+  padding: 10px;
+  border-radius: 5px;
+}
+.form input[type="text"],
+.form input[type="number"]{
+  margin-bottom: 5px;
+}
+.form_input input:last-child{
+  margin-bottom: 0;
+}
+.form input[type="textarea"]{
+  margin-left: 20px;
+}
+.form input[type="submit"]{
+  margin-top: 20px;
+  padding: 15px 30px;
+  width: max-content;
 }
 
 /* FOOTER */
