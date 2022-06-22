@@ -10,6 +10,10 @@ font-family: 'Yeseva One', cursive;
   padding: 0;
 }
 
+body {
+  font-family: Raleway, sans-serif;
+}
+
 ul, menu, li {
   list-style: none;
 }
@@ -54,8 +58,6 @@ a {
 }
 
 .header__menu-wrap.active {
-  padding: 25px 20px;
-  background-color: #fff;
   box-shadow: 0px 0px 15px 0px rgb(0, 0, 0, 0.5);
   transform: none;
 }
@@ -63,10 +65,12 @@ a {
 .header__menu-wrap {
   position: absolute;
   right: 0;
-  max-width: 233px;
+  width: 220px;
   height: 100%;
   margin-left: auto;
+  padding: 25px 20px;
   background: grey;
+  background-color: #fff;
   transition: .5s ease;
   transform: translateX(100%);
 }
@@ -83,6 +87,7 @@ a {
 }
 
 .header__nav-btn {
+  z-index: 5;
   position: fixed;
   right: 15px;
   width: 65px;
@@ -91,6 +96,34 @@ a {
   border-radius: 9px;
   cursor: pointer;
   background-color: #09af6e;
+}
+
+.header__nav-btn span {
+  display: block;
+  width: 28px;
+  height: 1px;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header__nav-btn span::before, 
+.header__nav-btn span::after {
+  display: block;
+  position: absolute;
+  width: 28px;
+  height: 1px;
+  margin: 0 auto;
+  content: '';
+  background-color: #fff;
+}
+
+.header__nav-btn span::before {
+  bottom: 5px;
+}
+
+.header__nav-btn span::after {
+  top: 5px;
 }
 
 .header__logo {
@@ -117,26 +150,70 @@ a {
 /* TOP SECTION */
 
 .top-section {
-  background-image: linear-gradient(rgba(15,191,130, 0.84) 32%, rgba(255,255,255, 0) 32%), url(../img/foam.svg), linear-gradient(rgba(15,191,130, 1) 32%, rgba(0,0,0, 0) 32%);
+  background-image: linear-gradient(rgba(15,191,130, 0.84) 32%, rgba(255,255,255, 0) 32%), url(../img/foam.svg), url(../img/bgrnd.webp), linear-gradient(rgba(15,191,130, 1) 32%, rgba(0,0,0, 0) 32%);
+
+  /* background-image: url(../img/bgrnd.webp); */
+  background-repeat: no-repeat;
+  background-position: right 0 top 0;
+  background-size: auto;
+  background-attachment: scroll;
+  padding: 40px 0 70px;
+
 }
 
 .top-section__list {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .top-section__list-item {
-  width: calc(100% / 3);
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 15px;
+}
+
+.top-section__item-caption {
+  margin-top: 20px;
+  color: #fff;
+  color: #fff;
+  font-weight: 700;
+  font-weight: 700;
+  font-size: 24px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.top-section__counter {
+  display: flex;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: rgb(7 146 98);
+  font-weight: 500;
+  font-size: 20px;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  background-color: rgba(255,255,255, 1);
+  box-shadow: 0px 43px 27px -31px rgb(7 146 98), 3px -4px 36px 0px rgb(155 250 217 / 50%), 0px 0px 0px 9px rgb(255 255 255 / 24%);
 }
 
 .top-section__item-img {
-  object-fit: contain;
   width: 100%;
+  max-width: 360px;
+  height: 360px;
+  object-fit: contain;
 }
 
 .top-section__btn {
+  transition: .5s;
   display: flex;
   position: relative;
   justify-content: center;
@@ -144,7 +221,7 @@ a {
   width: 100%;
   max-width: 400px;
   min-height: 75px;
-  margin: 30px auto;
+  margin: 55px auto 0;
   padding: 5px 10px;
   border: none;
   border-radius: 50px;
@@ -160,6 +237,7 @@ a {
 }
 
 .top-section__btn:hover {
+  transform: scale(1.1);
   background-color: rgba(139,220,10, 0.65);
   box-shadow: 0px 43px 27px -31px rgba(7,146,98, 1), 3px -4px 36px 0px rgba(201,255,116, 0.65), 0px 0px 0px 9px rgba(201,255,116, 0.32);
 }
@@ -241,6 +319,7 @@ a {
 @media (min-width: 767px) {
   .top-section__list {
     flex-direction: row;
+    align-items: flex-start;
   }
 
   .services__list {
@@ -252,5 +331,18 @@ a {
     margin: 5px;
     max-width: 350px;
   }
+}
 
+.form-section {
+  padding: 80px 0;
+  background-repeat: no-repeat, no-repeat;
+  background-image: linear-gradient(to right, rgba(122,198,0, 0.81) 17%, rgba(255,255,255, 0) 77%), url(./../img/foam.svg);
+  background-color: #079262;
+  background-position: left 0px top 0px, left calc(-263px + 50%) bottom -344px;
+}
+
+/* FOOTER */
+
+.footer {
+  /* // */
 }
