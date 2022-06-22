@@ -369,37 +369,49 @@ a {
 }
 .form{
   margin-top: 30px;
-  height: 233px;
+ 
 }
 .form_data{
   display: flex;
+  height: 227px;
 }
 .form input{
   border: none;
+  outline-style: none;
+  border-radius: 5px;
 }
 .form, .form_input{
   display: flex;
   flex-direction: column;
 }
-.form input[type="text"],
-.form input[type="number"]{
-  padding: 10px;
-  border-radius: 5px;
+.form_input{
+  justify-content: space-between;
+  
 }
-.form input[type="text"],
-.form input[type="number"]{
-  margin-bottom: 5px;
+.form input[type="text"]{
+  padding: 10px 10px 10px 33px;
+ 
+  font-size: 15px;
+  height: 65px;
+  width: 298px;
 }
+
 .form_input input:last-child{
   margin-bottom: 0;
 }
-.form input[type="textarea"]{
+.form textarea{
   margin-left: 20px;
+  padding: 20px;
+  width: 493px;
+  resize: none;
+  outline-style: none;
+  border-radius: 5px;
 }
 .form input[type="submit"]{
   margin-top: 20px;
-  padding: 15px 30px;
+  padding: 22px 40px;
   width: max-content;
+  font-size: 22px;
 }
 
 /* FOOTER */
