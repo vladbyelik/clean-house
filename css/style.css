@@ -51,16 +51,16 @@ a {
   font-family: Raleway, sans-serif;
   text-transform: uppercase;
   cursor: pointer;
-  background-color: rgba(255,255,255, 1);
+  background-color: #fff;
   box-shadow: 0px 43px 27px -31px rgba(7,146,98, 1), 3px -4px 36px 0px rgba(155,250,217, 0.5), 0px 0px 0px 9px rgba(255,255,255, 0.24);
   transition: .5s;
 }
 
 .button:hover {
   color: #fff;
-  transform: scale(1.1);
   background-color: rgba(139,220,10, 0.65);
   box-shadow: 0px 43px 27px -31px rgba(7,146,98, 1), 3px -4px 36px 0px rgba(201,255,116, 0.65), 0px 0px 0px 9px rgba(201,255,116, 0.32);
+  transform: scale(1.1);
 }
 
 .input {
@@ -122,13 +122,13 @@ a {
 }
 
 .header__menu-item {
-  margin-bottom: 7px;
+  margin-bottom: 12px;
 }
 
 .header__menu-item a {
   color: #079262;
+  font-size: 21px;
   font-family: 'Yeseva One', cursive;
-  font-size: 18px;
   text-transform: uppercase;
 }
 
@@ -142,6 +142,7 @@ a {
   border-radius: 9px;
   cursor: pointer;
   background-color: #09af6e;
+  box-shadow: 0px 43px 27px -31px rgb(7 146 98), 3px -4px 36px 0px rgb(155 250 217 / 50%), 0px 0px 0px 9px rgb(255 255 255 / 24%);
 }
 
 .header__nav-btn.active {
@@ -216,7 +217,8 @@ a {
 
   background-image: url(../img/bgrnd.webp);
   background-repeat: no-repeat;
-  background-position: right 0 top 0;
+  /* background-position: right 0 top 0; */
+  background-position: left;
   background-size: cover;
   background-attachment: scroll;
   padding: 40px 0 70px;
@@ -240,11 +242,8 @@ a {
 .top-section__item-caption {
   margin-top: 20px;
   color: #fff;
-  color: #fff;
-  font-weight: 700;
   font-weight: 700;
   font-size: 24px;
-  font-size: 30px;
   text-align: center;
 }
 
@@ -294,12 +293,11 @@ a {
   display: flex;
   position: relative;
   flex-direction: column;
-  justify-content: center;
   justify-content: flex-start;
   width: 340px;
   height: 340px;
   margin: 15px auto;
-  padding: 45px 35px 92px;
+  padding: 45px 10px 92px;
   border-radius: 50%;
   color: #fff;
   text-align: center;
@@ -334,7 +332,7 @@ a {
   align-items: flex-end;
   margin: 10px 0;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 25px;
 }
 
 .services__item-cost {
@@ -344,15 +342,16 @@ a {
   align-items: flex-end;
   margin: 15px 0;
   color: rgba(201,255,116,1);
+  font-size: 16px;
   transition: .3s ease;
 }
 
 .services__title {
   margin-bottom: 15px;
   color: white;
-  font-weight: normal;
+  font-weight: 600;
   font-size: 55px;
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
 }
 
@@ -366,11 +365,6 @@ a {
 }
 
 .services__list {
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center; */
   height: 1080px;
   overflow-y: hidden;
 }
@@ -433,6 +427,46 @@ a {
   box-shadow: 0px 43px 27px -31px rgba(7,146,98, 1), 3px -4px 36px 0px rgba(201,255,116, 0.65), 0px 0px 0px 9px rgba(201,255,116, 0.32);
 }
 
+/* PHOTO SECTION */
+
+.photo-section {
+  padding: 50px 0;
+}
+
+.photo-section__list {
+  margin-top: 40px;
+}
+
+.photo-section__list-item {
+  height: 400px;
+  padding: 5px;
+  border: 1px solid #e7e7e7;
+  border-radius: 15px;
+  overflow: hidden;
+  /* background: #f7f7f7; */
+  /* box-shadow: 0px 62px 37px -32px rgba(103,119,128, 0.16); */
+
+}
+
+.photo-section__item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.photo-section__title {
+  font-size: 45px;
+  color: #64bc13;
+  text-align: center;
+}
+
+.photo-section__subtitle {
+  margin-top: 15px;
+  color: #15344f;
+  font-size: 21px;
+  text-align: center;
+}
+
 /* FORM SECTION */
 
 .form-section {
@@ -464,14 +498,16 @@ a {
   align-items: center;
   border-bottom: 2px solid yellow;
   color: white;
+  font-weight: 500;
 }
 
 .form__tel {
   width: 118px;
   margin-bottom: 15px;
   padding: 15px 3px 1px;
-  background: transparent;
   color: white;
+  font-weight: 500;
+  background: transparent;
 }
 
 .form {
@@ -492,7 +528,7 @@ a {
 .form__submit {
   width: 213px;
   height: 69px;
-  margin-top: 20px;
+  margin-top: 35px;
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -513,7 +549,53 @@ a {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: 0px 43px 27px -31px rgb(7 146 98), 3px -4px 36px 0px rgb(155 250 217 / 50%), 0px 0px 0px 9px rgb(255 255 255 / 24%);
+  box-shadow: 0 43px 27px -31px rgb(7 146 98), 3px -4px 36px 0 rgb(155 250 217 / 50%), 0 0 0 9px rgb(255 255 255 / 24%);
+}
+
+
+.slick-arrow {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: black;
+  background: transparent;
+  box-shadow: 0px 0px 0px 7px rgba(229,241,241, 0.6);
+  transition: .5s ease;
+}
+
+.slick-arrow:hover, 
+.slick-arrow:focus {
+  background: transparent;
+  box-shadow: 0px 0px 0px 7px rgba(201,255,116, 0.65);
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  transition-delay: 0ms;
+}
+
+.slick-next {
+  right: 2%;
+}
+
+.slick-prev {
+  left: 2%;
+}
+
+.slick-dots li,
+.slick-dots li button {
+  width: 35px;
+  height: 4px;
+}
+
+.slick-dots li button:before,
+.slick-dots li button:after {
+  width: 35px;
+  height: 4px;
+  border-radius: 2px;
+  content: '';
+  background: rgba(15,191,130, 1);
+  transition: .5s ease;
 }
 
 @media (min-width: 991px) {
@@ -537,12 +619,13 @@ a {
   }
 
   .header__menu-item a {
-    color: #0f61a6;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    transition: .5s;
     padding: 8px 18px;
+    color: #0f61a6;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
     text-transform: none;
+    transition: .5s;
   }
   
   .header__menu-item a:hover {
@@ -565,9 +648,25 @@ a {
     display: none;
   }
 
+  .tel-btn {
+    display: none;
+  }
+
   .header__tels-block {
     position: static;
     margin: 0;
+  }
+
+  /* .slick-next {
+    right: -25px;
+  }
+  
+  .slick-prev {
+    left: -25px;
+  } */
+
+  .top-section__item-caption {
+    font-size: 30px;
   }
 }
 
@@ -590,10 +689,6 @@ a {
   .services__btn {
     display: none;
   }
-
-  /* .services__item {
-    max-width: 350px;
-  } */
 }
 
 /* clean-house.ua */

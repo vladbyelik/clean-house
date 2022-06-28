@@ -107,4 +107,21 @@ form.addEventListener('submit', (e) => {
       res.ok && form.reset();
     })
     .catch(console.log)
+});
+
+$(document).on('ready', function() {
+  $(".photo-section__list").slick({
+    dots: true,
+    slidesToShow: 2,
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
+  });
 })
