@@ -1,36 +1,59 @@
 const navBtn = document.getElementById('nav-btn');
 const headerNav = document.getElementById('header__nav');
 const headerMenu = document.getElementById('header__menu-wrap');
-const list = document.getElementsByClassName('services__item');
 const form = document.getElementById('form');
 
-navBtn.addEventListener('click', () => {
-  navBtn.classList.toggle('active');
+const formPhoneNumber = document.getElementById('phone-number');
+
+const servicesBtn = document.getElementById('services_btn');
+const servicesList = document.getElementById('services__list');
+const list = document.getElementsByClassName('services__item');
+const menuItems = document.getElementsByClassName('header__menu-item-link');
+const servicesBtns = document.getElementsByClassName('services__item-btn');
+const servicesDescList = document.getElementsByClassName('services__item-desc');
+
+const toggleMenuActive = () => {
+  const isActive = navBtn.classList.contains("active");
+
   headerMenu.classList.toggle('active');
   headerNav.classList.toggle('active');
-  document.body.style.overflow = "hidden";
-  document.body.style.marginRight = "15px";
-  navBtn.style.right = parseInt(getComputedStyle(navBtn).right) + 15 + "px";
-});
+  navBtn.classList.toggle('active');
+
+  document.body.style.overflow = isActive ? "" : "hidden";
+  document.body.style.marginRight = isActive ? "" : "15px";
+}
+
+navBtn.addEventListener('click', toggleMenuActive);
 
 headerNav.addEventListener('click', (e) => {
   if(e.target.classList.contains('header__nav')) {
-    headerMenu.classList.toggle('active');
-    headerNav.classList.toggle('active');
-    document.body.style.overflow = "";
-    document.body.style.marginRight = "";
-    navBtn.style.right = "15px";
+    toggleMenuActive();
   }
 });
 
-Array.from(list).forEach((item, id) => {
+Array.from(menuItems).forEach(i => {
+  i.onclick = () => {
+    navBtn.classList.contains("active") && toggleMenuActive();
+  }
+});
+
+Array.from(servicesBtns).forEach((item, idx) => {
   item.addEventListener('click', () => {
-    console.log(id);
+    servicesDescList[idx].style.opacity = '1';
+    item.style.opacity = '0';
+    list[idx].style.backgroundColor = 'rgba(122,198,0, 1)';
   });
 
   item.addEventListener('blur', () => {
-    console.log('blur!');
+    servicesDescList[idx].style.opacity = '0';
+    item.style.opacity = '1';
+    list[idx].style.backgroundColor = '';
   });
+});
+
+servicesBtn.addEventListener('click', () => {
+  servicesList.style.height = 'auto';
+  servicesBtn.style.display = 'none';
 });
 
 // telegram bot config
@@ -40,10 +63,39 @@ const token = '5320837844:AAHXm0sEfPvsk5GVc9YN_XnWIn-sWI_OrQs';
 const chatId = '-1001619463110';
 const uriApi = `https://api.telegram.org/bot${token}/sendMessage`;
 
+
+formPhoneNumber.addEventListener('input', (e) => {
+  const formattedPhoneNumber = (value) => {
+    if(!value) return value;
+
+    const phoneNum = value.replace(/[^\d]/g, '');
+
+    if (phoneNum.length < 3) return phoneNum;
+    if (phoneNum.length < 6) {
+      return `(${phoneNum.slice(0, 2)}) ${phoneNum.slice(2)}`;
+    }
+    if (phoneNum.length < 8) {
+      return `(${phoneNum.slice(0, 2)}) ${phoneNum.slice(2,5)}-${phoneNum.slice(5, 7)}`;
+    }
+    return `(${phoneNum.slice(0, 2)}) ${phoneNum.slice(2,5)}-${phoneNum.slice(5, 7)}-${phoneNum.slice(7, 9)}`;
+  }
+
+  const formattedFN = formattedPhoneNumber(e.target.value);
+  formPhoneNumber.value = formattedFN;
+})
+
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const text = `<b>Имя: </b>${e.target.name.value}\n<b>Телефон: ${e.target.phone.value}</b>`
+  const correctTelNumber = e.target.phone.value
+    .split('')
+    .filter(Boolean)
+    .filter(i => i !== '-' && i !== '(' && i !== ')' && i !== ' ').join('')
+
+  const text = `<b>Имя: </b>${e.target.name.value}\n<b>Телефон: +380${correctTelNumber}</b>`;
+
+  console.log(correctTelNumber);
 
   const Data = new FormData();
   Data.set('text', text);

@@ -25,22 +25,20 @@
         <div id="header__menu-wrap" class="header__menu-wrap">
           <menu class="header__menu">
             <li class="header__menu-item">
-              <a href="#">Про компанію</a>
+              <a class="header__menu-item-link" href="#services">Послуги</a>
             </li>
             <li class="header__menu-item">
-              <a href="#">Послуги</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#">Замовити</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#">Контакти</a>
+              <a class="header__menu-item-link" href="#order">Замовити</a>
             </li>
           </menu>
-  
-          <a class="header__tel" href="tel:555-555-5555">+380(63) 555-55-55</a>
         </div>
       </nav>
+
+      <div class="header__tels-block">
+        <a class="header__tel" href="tel:+380(63)5555555">+380(63) 555-55-55</a>
+        <a class="header__tel" href="tel:555-555-5555">+380(63) 555-55-55</a>
+        <a class="header__tel" href="tel:555-555-5555">+380(63) 555-55-55</a>
+      </div>
 
       <button id="nav-btn" class="header__nav-btn">
         <span></span>
@@ -80,31 +78,36 @@
         </li>
       </ul>
 
-      <button class="top-section__btn">
+      <a href="#order" class="top-section__btn button">
         Замовити клінінг
-      </button>
+      </a>
     </div>
   </section>
 
-  <section class="services">
+  <section id="services" class="services">
     <div class="container">
       <h2 class="services__title">Професійний клінінг</h2>
       <h3 class="services__subtitle">
         Якісно, доступно i швидко
       </h3>
 
-      <ul class="services__list">
+      <ul id="services__list" class="services__list">
 
-        <li tabindex="0" class="services__item">
+        <li class="services__item">
           <div class="services__img-wrap">
             <img class="services__img" src="./img/cleaning-tools-2.svg" alt="roller"/>
           </div>
           <h4 class="services__item-title">
             Генеральна уборка
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             від 40 грн/кв.м 
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Благодаря нашей компании, Вы сможете превратить этот процесс в незаметные 
             для Вас моменты с неизменно позитивным результатом
@@ -118,9 +121,14 @@
           <h4 class="services__item-title">
             Послеремонтная  уборка
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             від 40 грн/кв.м 
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Благодаря нашей компании, Вы сможете превратить этот процесс в незаметные 
             для Вас моменты с неизменно позитивным результатом
@@ -134,9 +142,14 @@
           <h4 class="services__item-title">
             Поддерживающая  уборка
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             від 25 грн/кв.м 
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Чистота и порядок - естественная потребность цивилизованного человека.
           </p>
@@ -149,9 +162,14 @@
           <h4 class="services__item-title">
             Химчитска мебели и ковров 
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             От 600 грн/кв.м 
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Чистота и порядок - естественная потребность цивилизованного человека.
           </p>
@@ -164,9 +182,14 @@
           <h4 class="services__item-title">
             Уборка после пожара
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             От 100 грн/кв.м 
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Чистота и порядок - естественная потребность цивилизованного человека.
           </p>
@@ -179,9 +202,14 @@
           <h4 class="services__item-title">
             Уборка после потопа
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             От 60 грн/кв.м 
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Чистота и порядок - естественная потребность цивилизованного человека.
           </p>
@@ -194,9 +222,14 @@
           <h4 class="services__item-title">
             Уборка после смерти
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             От 70 грн/кв.м 
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Чистота и порядок - естественная потребность цивилизованного человека.
           </p>
@@ -209,9 +242,14 @@
           <h4 class="services__item-title">
             Мойка окон
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             150 грн/окно
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Чистота и порядок - естественная потребность цивилизованного человека.
           </p>
@@ -224,9 +262,14 @@
           <h4 class="services__item-title">
             Дезинфекция помещения
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             От 30 грн/кв.м 
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Чистота и порядок - естественная потребность цивилизованного человека.
           </p>
@@ -239,9 +282,14 @@
           <h4 class="services__item-title">
             Мойка фасада
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             От 60 грн/кв.м 
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Чистота и порядок - естественная потребность цивилизованного человека.
           </p>
@@ -254,9 +302,14 @@
           <h4 class="services__item-title">
             Уборка офисов
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             От 35 грн/кв.м 
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Чистота и порядок - естественная потребность цивилизованного человека.
           </p>
@@ -269,9 +322,14 @@
           <h4 class="services__item-title">
             Уборка складских помещений
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             От 40 грн/кв.м 
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Чистота и порядок - естественная потребность цивилизованного человека.
           </p>
@@ -284,14 +342,23 @@
           <h4 class="services__item-title">
             Уборка домов и коттеджей
           </h4>
-          <h5 class="services__item-title">
+          <h5 class="services__item-cost">
             От 40 грн/кв.м 
           </h5>
+          <div class="services__item-btn-wrapper">
+            <button class="services__item-btn">
+              Детальніше
+            </button>
+          </div>
           <p class="services__item-desc">
             Чистота и порядок - естественная потребность цивилизованного человека.
           </p>
         </li>
       </ul>
+
+      <button id="services_btn" class="services__btn button">
+        Більше
+      </button>
     </div>
   </section>
 
@@ -301,24 +368,30 @@
     </div>
   </section>
 
-  <section class="form-section">
+  <section id="order" class="form-section">
     <div class="container">
-
-      <h2>
+      <h2 class="form-section__title">
         Замовити клінінг
       </h2>
 
+      <h3 class="form-section__subtitle">
+        Максимально вигідна пропозиція чекає на Вас!
+      </h3>
+
       <form id="form" class="form">
-
-        <input required type="text" name="name" placeholder="Введіть ім'я"/>
-        <input required type="number" name="phone" placeholder="Введіть телефон"/>
-        
-        <input type="submit" />
-
+        <div class="form__inputs">
+          <input required type="text" class="input" name="name" placeholder="Введіть Ваше ім'я"/>
+          
+          <div class="form__tel-input-wrap">
+            +380<input pattern=".{14,}" required type="text" autofocus name="phone" class="input form__tel" id="phone-number"/>  
+          </div>
+        </div>
+        <input class="form__submit" type="submit" value="Відправити" />
       </form>
-      
     </div>
   </section>
+
+  <a class="tel-btn" href="tel:+380635555555"></a>
 
   <div>
     фотоотсчеты надо (скинут)
