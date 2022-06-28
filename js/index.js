@@ -19,7 +19,7 @@ const toggleMenuActive = () => {
   headerNav.classList.toggle('active');
   navBtn.classList.toggle('active');
 
-  // document.body.style.overflow = isActive ? "" : "hidden";
+  document.body.style.overflow = isActive ? "" : "hidden";
   // document.body.style.marginRight = isActive ? "" : "15px";
 }
 

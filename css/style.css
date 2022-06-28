@@ -12,10 +12,13 @@ font-family: 'Yeseva One', cursive;
 
 html {
   scroll-behavior: smooth;
+
 }
 
 body {
   font-family: Raleway, sans-serif;
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
 }
 
 ul, menu, li {
@@ -135,6 +138,7 @@ a {
 .header__nav-btn {
   z-index: 5;
   position: fixed;
+  top: 14px;
   right: 15px;
   width: 65px;
   height: 65px;
@@ -585,13 +589,13 @@ a {
 
 .slick-dots li,
 .slick-dots li button {
-  width: 35px;
+  width: 20px;
   height: 4px;
 }
 
 .slick-dots li button:before,
 .slick-dots li button:after {
-  width: 35px;
+  width: 20px;
   height: 4px;
   border-radius: 2px;
   content: '';
@@ -690,6 +694,15 @@ a {
   .services__btn {
     display: none;
   }
-}
 
+  .slick-dots li,
+  .slick-dots li button {
+    width: 35px; 
+  }
+
+  .slick-dots li button:before,
+  .slick-dots li button:after {
+    width: 35px;
+  }
+}
 /* clean-house.ua */
