@@ -127,6 +127,7 @@ a {
 .header__menu-item a {
   display: block;
   color: #079262;
+  font-weight: 600;
   font-size: 21px;
   font-family: 'Raleway', sans-serif;
   text-align: center;
