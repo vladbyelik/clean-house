@@ -38,16 +38,26 @@ Array.from(menuItems).forEach(i => {
 });
 
 Array.from(servicesBtns).forEach((item, idx) => {
+  const hideOnClickOutside = element => {
+    const isVisible = elem => !!elem 
+      && !!(elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length);
+
+    const outsideClickListener = event => {
+      if (!element.contains(event.target) && isVisible(element)) {
+        servicesDescList[idx].style.opacity = '0';
+        item.style.opacity = '1';
+        list[idx].style.backgroundColor = '';
+      }
+    }
+
+    document.addEventListener('click', outsideClickListener)
+  }
+
   item.addEventListener('click', () => {
     servicesDescList[idx].style.opacity = '1';
     item.style.opacity = '0';
     list[idx].style.backgroundColor = 'rgba(122,198,0, 1)';
-  });
-
-  item.addEventListener('blur', () => {
-    servicesDescList[idx].style.opacity = '0';
-    item.style.opacity = '1';
-    list[idx].style.backgroundColor = '';
+    hideOnClickOutside(item);
   });
 });
 
