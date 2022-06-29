@@ -114,6 +114,7 @@ form.addEventListener('submit', (e) => {
 
   fetch(uriApi, { method: 'POST', body: Data })
     .then(res => {
+      alert('Дякуємо! Наші менеджери звʼяжуться з Вами найближчим часом!')
       res.ok && form.reset();
     })
     .catch(console.log)
@@ -124,6 +125,8 @@ $(document).on('ready', function() {
     dots: true,
     slidesToShow: 2,
     adaptiveHeight: true,
+    prevArrow: '<button type="button" class="photo-section__btn photo-section__btn-left icon-left-open-big"></button>',
+    nextArrow: '<button type="button" class="photo-section__btn photo-section__btn-right icon-right-open-big"></button>',
     responsive: [
       {
         breakpoint: 991,
