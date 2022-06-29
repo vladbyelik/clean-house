@@ -191,6 +191,7 @@ a {
 }
 
 .header__logo span {
+  margin-left: 1px;
   color: #09af6e;
   font-size: 20px;
   font-family: 'Raleway', sans-serif;
@@ -404,6 +405,7 @@ a {
 
 .services__item-btn {
   display: flex;
+  z-index: 9;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -422,7 +424,7 @@ a {
   background-color: rgba(255,255,255, 1);
   box-shadow: 0px 43px 27px -31px rgb(7 146 98), 3px -4px 36px 0px rgb(155 250 217 / 50%), 0px 0px 0px 9px rgb(255 255 255 / 24%);
   transition: .5s;
-  z-index: 9;
+  -moz-outline: none;
 }
 
 .services__item-btn:hover {
