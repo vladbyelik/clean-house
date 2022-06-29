@@ -105,8 +105,6 @@ form.addEventListener('submit', (e) => {
 
   const text = `<b>Имя: </b>${e.target.name.value}\n<b>Телефон: +380${correctTelNumber}</b>`;
 
-  console.log(correctTelNumber);
-
   const Data = new FormData();
   Data.set('text', text);
   Data.set('chat_id', chatId);

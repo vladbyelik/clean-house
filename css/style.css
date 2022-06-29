@@ -1,9 +1,3 @@
-/* 
-font-family: 'Raleway', sans-serif;
-font-family: 'Yeseva One', cursive; 
-*/
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +6,6 @@ font-family: 'Yeseva One', cursive;
 
 html {
   scroll-behavior: smooth;
-
 }
 
 body {
@@ -132,9 +125,11 @@ a {
 }
 
 .header__menu-item a {
+  display: block;
   color: #079262;
   font-size: 21px;
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -151,10 +146,6 @@ a {
   background-color: #09af6e;
   box-shadow: 0px 43px 27px -31px rgb(7 146 98), 3px -4px 36px 0px rgb(155 250 217 / 50%), 0px 0px 0px 9px rgb(255 255 255 / 24%);
 }
-
-/* .header__nav-btn.active {
-  right: 30px;
-} */
 
 .header__nav-btn span {
   display: block;
@@ -188,7 +179,7 @@ a {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  color: #0f61a6;
+  color: #07090b;
   line-height: 21px;
   font-family: 'Yeseva One', cursive;
 }
@@ -214,7 +205,7 @@ a {
 
 .header__tel {
   margin-bottom: 4px;
-  color: #0f61a6;
+  color: #07090b;
   font-family: 'Yeseva One', cursive;
   cursor: pointer;
 }
@@ -289,7 +280,6 @@ a {
 .services {
   padding: 40px 0 40px;
   font-family: 'Yeseva One', cursive; 
-  /* background-image: linear-gradient(rgba(15,191,130, 0.84) 32%, rgba(255,255,255, 0) 32%), url(../img/foam.svg), linear-gradient(rgba(15,191,130, 1) 32%, rgba(0,0,0, 0) 32%); */
   background-image: linear-gradient(rgba(15,191,130, 0.84) 100%, rgba(255,255,255, 0) 100%), url(../img/foam.svg), linear-gradient(rgba(15,191,130, 1) 70%, rgba(0,0,0, 0) 100%);
   background-repeat: no-repeat;
   background-position: center;
@@ -466,9 +456,9 @@ a {
 
 .form-section {
   padding: 80px 0;
-  background-repeat: no-repeat, no-repeat;
-  background-image: linear-gradient(to right, rgba(122,198,0, 0.81) 17%, rgba(255,255,255, 0) 77%), url(./../img/foam.svg);
   background-color: #079262;
+  background-image: linear-gradient(to right, rgba(122,198,0, 0.81) 17%, rgba(255,255,255, 0) 77%), url(./../img/foam.svg);
+  background-repeat: no-repeat, no-repeat;
   background-position: left 0px top 0px, left calc(-263px + 50%) bottom -344px;
 }
 
@@ -796,4 +786,3 @@ a {
     width: 35px;
   }
 }
-/* clean-house.ua */
