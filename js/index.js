@@ -2,9 +2,7 @@ const navBtn = document.getElementById('nav-btn');
 const headerNav = document.getElementById('header__nav');
 const headerMenu = document.getElementById('header__menu-wrap');
 const form = document.getElementById('form');
-
 const formPhoneNumber = document.getElementById('phone-number');
-
 const servicesBtn = document.getElementById('services_btn');
 const servicesList = document.getElementById('services__list');
 const list = document.getElementsByClassName('services__item');
