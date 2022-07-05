@@ -36,7 +36,8 @@ Array.from(menuItems).forEach(i => {
 });
 
 Array.from(servicesBtns).forEach((item, idx) => {
-  const hideOnClickOutside = element => {
+
+  const hideOnClickOutside = (element) => {
     const isVisible = elem => !!elem 
       && !!(elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length);
 
@@ -48,7 +49,7 @@ Array.from(servicesBtns).forEach((item, idx) => {
       }
     }
 
-    document.addEventListener('click', outsideClickListener)
+    document.addEventListener('click', outsideClickListener);
   }
 
   item.addEventListener('click', () => {
@@ -61,6 +62,7 @@ Array.from(servicesBtns).forEach((item, idx) => {
 
 servicesBtn.addEventListener('click', () => {
   servicesList.style.height = 'auto';
+  servicesList.style.overflow = 'scroll';
   servicesBtn.style.display = 'none';
 });
 
