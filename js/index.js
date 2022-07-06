@@ -62,15 +62,18 @@ Array.from(servicesBtns).forEach((item, idx) => {
 
 servicesBtn.addEventListener('click', () => {
   servicesList.style.height = 'auto';
-  servicesList.style.overflow = 'scroll';
+  servicesList.style.overflow = 'initial';
   servicesBtn.style.display = 'none';
 });
 
 // telegram bot config
 // YouTube: https://www.youtube.com/watch?v=RviYQrNdDok&ab_channel=AVISTV
 
-const token = '5320837844:AAHXm0sEfPvsk5GVc9YN_XnWIn-sWI_OrQs';
-const chatId = '-1001619463110';
+// const token = '5320837844:AAHXm0sEfPvsk5GVc9YN_XnWIn-sWI_OrQs';
+// const chatId = '-1001619463110';
+
+const token = '5549292350:AAEu0r2Qc9LOcvAgA_MdM9s2KxiF1Tu7cWA';
+const chatId = '-1001527322786';
 const uriApi = `https://api.telegram.org/bot${token}/sendMessage`;
 
 
@@ -103,7 +106,7 @@ form.addEventListener('submit', (e) => {
     .filter(Boolean)
     .filter(i => i !== '-' && i !== '(' && i !== ')' && i !== ' ').join('')
 
-  const text = `<b>Имя: </b>${e.target.name.value}\n<b>Телефон: +380${correctTelNumber}</b>`;
+  const text = `<b>Привет! Новая заявка на сайте :)\n</b><b>Имя: </b>${e.target.name.value}\n<b>Телефон: +380${correctTelNumber}</b>`;
 
   const Data = new FormData();
   Data.set('text', text);

@@ -549,8 +549,7 @@ a {
 }
 
 .photo-section__list-item {
-  height: 400px;
-  padding: 5px;
+  height: 300px;
   border: 1px solid #e7e7e7;
   border-radius: 15px;
   overflow: hidden;
@@ -987,5 +986,9 @@ a {
   .slick-dots li button:before,
   .slick-dots li button:after {
     width: 35px;
+  }
+
+  .photo-section__list-item {
+    height: 400px;
   }
 }
