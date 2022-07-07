@@ -73,9 +73,9 @@ servicesBtn.addEventListener('click', () => {
 });
 
 contacts.addEventListener('click', () => {
-  contacts.classList.remove('heartbeat');
   telBtnWrap.classList.toggle('active');
   contacts.classList.toggle('rotate');
+  contacts.classList.remove('heartbeat');
 
   hideOnClickOutside(contacts, () => {
     telBtnWrap.classList.remove('active');
