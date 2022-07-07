@@ -412,28 +412,30 @@ a {
   opacity: 0;
   z-index: 3;
   position: absolute;
-  max-height: 220px;
-  overflow-y: scroll;
   top: 72%;
   right: 0;
   bottom: 0;
   left: 0;
   flex-direction: column;
   align-items: center;
+  max-width: 300px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  max-height: 220px;
+  margin: 0 auto;
   padding: 10px 7px;
   border-radius: 8px;
+  overflow-y: scroll;
   color: black;
   font-weight: 500;
   font-family: 'Raleway', sans-serif;
   background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   transition: .5s;
   -webkit-transition: .5s;
   -o-transition: .5s;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .services__item-desc span {
@@ -726,6 +728,11 @@ a {
   -webkit-box-shadow: 0 43px 27px -31px rgb(7 146 98), 3px -4px 36px 0 rgb(155 250 217 / 50%), 0 0 0 9px rgb(255 255 255 / 24%);
 }
 
+.tel-btn svg {
+  width: 30px;
+  height: 30px;
+}
+
 .contacts {
   position: fixed;
   right: 30px;
@@ -737,9 +744,6 @@ a {
   z-index: 50;
   border: none;
   cursor: pointer;
-  /* -webkit-transition: .3s;
-  -o-transition: .3s; */
-  /* transition: .3s; */
 }
 
 .contacts__btn.rotate {
