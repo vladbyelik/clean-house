@@ -74,15 +74,13 @@ servicesBtn.addEventListener('click', () => {
 
 contactsBtn.addEventListener('click', () => {
   telBtnWrap.classList.toggle('active');
-  // contactsBtn.classList.toggle('rotate');
+  contactsBtn.classList.toggle('rotate');
   contactsBtn.classList.remove('heartbeat');
-  contactsBtn.style.transform = 'rotate(135deg)';
 
   hideOnClickOutside(contactsBtn, () => {
     telBtnWrap.classList.remove('active');
-    // contactsBtn.classList.remove('rotate');
+    contactsBtn.classList.remove('rotate');
     contactsBtn.classList.add('heartbeat');
-    contactsBtn.style.transform = 'rotate(0)';
   });
 })
 
