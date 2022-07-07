@@ -72,13 +72,14 @@ Array.from(servicesBtns).forEach((item, idx) => {
     // list[idx].style.backgroundColor = 'rgba(122,198,0, 1)';
 
     Swal.fire({
-      title: servicesDescList[idx].innerText,
+      text: servicesDescList[idx].innerText,
       showClass: {
         popup: 'animate__animated animate__fadeInDown'
       },
       hideClass: {
         popup: 'animate__animated animate__fadeOutUp'
-      }
+      },
+      confirmButtonColor: 'rgb(122, 198, 0)',
     })
 
     // hideOnClickOutside(item, toggleStyles);
