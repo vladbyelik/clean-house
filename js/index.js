@@ -9,7 +9,7 @@ const list = document.getElementsByClassName('services__item');
 const menuItems = document.getElementsByClassName('header__menu-item-link');
 const servicesBtns = document.getElementsByClassName('services__item-btn');
 const servicesDescList = document.getElementsByClassName('services__item-desc');
-const contacts = document.getElementById('contacts');
+const contactsBtn = document.getElementById('contacts');
 const telBtnWrap = document.getElementById('tel-btn-wrap');
 
 const toggleMenuActive = () => {
@@ -72,15 +72,15 @@ servicesBtn.addEventListener('click', () => {
   servicesBtn.style.display = 'none';
 });
 
-contacts.addEventListener('click', () => {
+contactsBtn.addEventListener('click', () => {
   telBtnWrap.classList.toggle('active');
-  contacts.classList.toggle('rotate');
-  contacts.classList.remove('heartbeat');
+  contactsBtn.classList.toggle('rotate');
+  contactsBtn.classList.remove('shake');
 
-  hideOnClickOutside(contacts, () => {
+  hideOnClickOutside(contactsBtn, () => {
     telBtnWrap.classList.remove('active');
-    contacts.classList.remove('rotate');
-    contacts.classList.add('heartbeat');
+    contactsBtn.classList.remove('rotate');
+    contactsBtn.classList.add('shake');
   });
 })
 
