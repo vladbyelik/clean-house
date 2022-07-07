@@ -52,17 +52,36 @@ Array.from(menuItems).forEach(i => {
 
 Array.from(servicesBtns).forEach((item, idx) => {
 
+  const test = () => {
+    // console.log('sfsdf', item.getBoundingClientRect());
+
+    // const { top } = item.getBoundingClientRect();
+  }
+
   const toggleStyles = () => {
     servicesDescList[idx].style.opacity = '0';
     item.style.opacity = '1';
     list[idx].style.backgroundColor = '';
+    document.removeEventListener('scroll', test);
   }
 
-  item.addEventListener('click', () => {
-    servicesDescList[idx].style.opacity = '1';
-    item.style.opacity = '0';
-    list[idx].style.backgroundColor = 'rgba(122,198,0, 1)';
-    hideOnClickOutside(item, toggleStyles);
+  item.addEventListener('click', (e) => {
+
+    // servicesDescList[idx].style.opacity = '1';
+    // item.style.opacity = '0';
+    // list[idx].style.backgroundColor = 'rgba(122,198,0, 1)';
+
+    Swal.fire({
+      title: servicesDescList[idx].innerText,
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
+
+    // hideOnClickOutside(item, toggleStyles);
   });
 });
 
