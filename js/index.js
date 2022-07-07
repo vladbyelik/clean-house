@@ -9,6 +9,8 @@ const list = document.getElementsByClassName('services__item');
 const menuItems = document.getElementsByClassName('header__menu-item-link');
 const servicesBtns = document.getElementsByClassName('services__item-btn');
 const servicesDescList = document.getElementsByClassName('services__item-desc');
+const contacts = document.getElementById('contacts');
+const telBtnWrap = document.getElementById('tel-btn-wrap');
 
 const toggleMenuActive = () => {
   const isActive = navBtn.classList.contains("active");
@@ -19,6 +21,19 @@ const toggleMenuActive = () => {
 
   document.body.style.overflow = isActive ? "" : "hidden";
   // document.body.style.marginRight = isActive ? "" : "15px";
+}
+
+const hideOnClickOutside = (element, toggle) => {
+  const isVisible = elem => !!elem 
+    && !!(elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length);
+
+  const outsideClickListener = event => {
+    if (!element.contains(event.target) && isVisible(element)) {
+      toggle();
+    }
+  }
+
+  document.addEventListener('click', outsideClickListener);
 }
 
 navBtn.addEventListener('click', toggleMenuActive);
@@ -37,26 +52,17 @@ Array.from(menuItems).forEach(i => {
 
 Array.from(servicesBtns).forEach((item, idx) => {
 
-  const hideOnClickOutside = (element) => {
-    const isVisible = elem => !!elem 
-      && !!(elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length);
-
-    const outsideClickListener = event => {
-      if (!element.contains(event.target) && isVisible(element)) {
-        servicesDescList[idx].style.opacity = '0';
-        item.style.opacity = '1';
-        list[idx].style.backgroundColor = '';
-      }
-    }
-
-    document.addEventListener('click', outsideClickListener);
+  const toggleStyles = () => {
+    servicesDescList[idx].style.opacity = '0';
+    item.style.opacity = '1';
+    list[idx].style.backgroundColor = '';
   }
 
   item.addEventListener('click', () => {
     servicesDescList[idx].style.opacity = '1';
     item.style.opacity = '0';
     list[idx].style.backgroundColor = 'rgba(122,198,0, 1)';
-    hideOnClickOutside(item);
+    hideOnClickOutside(item, toggleStyles);
   });
 });
 
@@ -65,6 +71,18 @@ servicesBtn.addEventListener('click', () => {
   servicesList.style.overflow = 'initial';
   servicesBtn.style.display = 'none';
 });
+
+contacts.addEventListener('click', () => {
+  contacts.classList.remove('heartbeat');
+  telBtnWrap.classList.toggle('active');
+  contacts.classList.toggle('rotate');
+
+  hideOnClickOutside(contacts, () => {
+    telBtnWrap.classList.remove('active');
+    contacts.classList.remove('rotate');
+    contacts.classList.add('heartbeat');
+  });
+})
 
 // telegram bot config
 // YouTube: https://www.youtube.com/watch?v=RviYQrNdDok&ab_channel=AVISTV
@@ -75,7 +93,6 @@ servicesBtn.addEventListener('click', () => {
 const token = '5549292350:AAEu0r2Qc9LOcvAgA_MdM9s2KxiF1Tu7cWA';
 const chatId = '-1001527322786';
 const uriApi = `https://api.telegram.org/bot${token}/sendMessage`;
-
 
 formPhoneNumber.addEventListener('input', (e) => {
   const formattedPhoneNumber = (value) => {
