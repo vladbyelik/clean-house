@@ -408,7 +408,7 @@ a {
 }
 
 .services__item-desc {
-  display: flex;
+  display: none;
   opacity: 0;
   z-index: 3;
   position: absolute;
@@ -750,6 +750,10 @@ a {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);  
   -ms-transform: rotate(135deg);  
+}
+
+.contacts__btn.rotate::before {
+  content: '\e800';
 }
 
 .tel-btn-wrap {

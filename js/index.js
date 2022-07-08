@@ -20,7 +20,6 @@ const toggleMenuActive = () => {
   navBtn.classList.toggle('active');
 
   document.body.style.overflow = isActive ? "" : "hidden";
-  // document.body.style.marginRight = isActive ? "" : "15px";
 }
 
 const hideOnClickOutside = (element, toggle) => {
@@ -51,38 +50,18 @@ Array.from(menuItems).forEach(i => {
 });
 
 Array.from(servicesBtns).forEach((item, idx) => {
+  let textData = '';
 
-  const test = () => {
-    // console.log('sfsdf', item.getBoundingClientRect());
-
-    // const { top } = item.getBoundingClientRect();
+  for (let i = 0; i < servicesDescList[idx].children.length; i++) {
+    textData += servicesDescList[idx].children[i].innerHTML;
+    textData += '</br>'
   }
 
-  const toggleStyles = () => {
-    servicesDescList[idx].style.opacity = '0';
-    item.style.opacity = '1';
-    list[idx].style.backgroundColor = '';
-    document.removeEventListener('scroll', test);
-  }
-
-  item.addEventListener('click', (e) => {
-
-    // servicesDescList[idx].style.opacity = '1';
-    // item.style.opacity = '0';
-    // list[idx].style.backgroundColor = 'rgba(122,198,0, 1)';
-
+  item.addEventListener('click', () => {
     Swal.fire({
-      text: servicesDescList[idx].innerText,
-      showClass: {
-        popup: 'animate__animated animate__fadeInDown'
-      },
-      hideClass: {
-        popup: 'animate__animated animate__fadeOutUp'
-      },
+      html: textData,
       confirmButtonColor: 'rgb(122, 198, 0)',
     })
-
-    // hideOnClickOutside(item, toggleStyles);
   });
 });
 
